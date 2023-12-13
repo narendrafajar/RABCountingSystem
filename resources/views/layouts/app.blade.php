@@ -22,15 +22,15 @@
         <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.base.css')}}">
         <!-- endinject -->
         <!-- Plugin css for this page -->
-        <link rel="stylesheet" href="{{asset('vendors/select2/select2.min.css')}}">
-        <link rel="stylesheet" href="{{asset('vendors/select2-bootstrap-theme/select2-bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{asset('vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">
-        <link rel="stylesheet" href="{{asset('js/select.dataTables.min.css')}}">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="{{asset('js/main.js')}}">
         <!-- End plugin css for this page -->
         <!-- inject:css -->
         <link rel="stylesheet" href="{{asset('css/vertical-layout-light/style.css')}}">
         <!-- endinject -->
-        <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" />
+        <link rel="shortcut icon" href="{{asset('images/fav_icon_rcs.png')}}" />
+        <!-- Tambahkan ini di bagian head tampilan Blade Anda -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.css"/>
     </head>
     <body class="font-sans antialiased">
         <div class="container-scroller">
@@ -44,7 +44,7 @@
                             </div>
                             <footer class="footer">
                                 <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                                  <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">System Perhitungan <a href="https://www.bootstrapdash.com/" target="_blank">RAB</a> by Narendra Fajar Pamungkas.</span>
+                                  <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">{{__('Sistem Perhitungan')}} <a href="#" target="_blank">RAB</a> by Narendra Fajar Pamungkas.</span>
                                   <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
                                 </div>
                             </footer>
@@ -59,7 +59,7 @@
         <script src="{{asset('vendors/chart.js/Chart.min.js')}}"></script>
         <script src="{{asset('vendors/bootstrap-datepicker/bootstrap-datepicker.min.js')}}"></script>
         <script src="{{asset('vendors/progressbar.js/progressbar.min.js')}}"></script>
-        <script src="{{asset('vendors/select2/select2.min.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <!-- End plugin js for this page -->
         <!-- inject:js -->
         <script src="{{asset('js/off-canvas.js')}}"></script>
@@ -73,6 +73,8 @@
         <script src="{{asset('js/dashboard.js')}}"></script>
         <script src="{{asset('js/Chart.roundedBarCharts.js')}}"></script>
         <script src="{{asset('js/select2.js')}}"></script>
+        <!-- Tambahkan ini di bagian body sebelum akhir tag </body> -->
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.25/datatables.min.js"></script>
         <!-- End custom js for this page-->
     </body>
 </html>

@@ -7,10 +7,10 @@
         </div>
         <div>
         <a class="navbar-brand brand-logo" href="index.html">
-            <img src="images/rwt.png" alt="logo" />
+            <img src="images/RCS_logo.png" alt="logo" />
         </a>
         <a class="navbar-brand brand-logo-mini" href="index.html">
-            <img src="images/logo-mini.svg" alt="logo" />
+            <img src="images/fav_icon_rcs.png" alt="logo" />
         </a>
         </div>
     </div>
@@ -43,7 +43,7 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="index.php?halaman=project">Daftar Project</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('proyek_index')}}">Daftar Project</a></li>
               </ul>
             </div>
           </li>
@@ -60,4 +60,16 @@
               </ul>
             </div>
           </li>
+        </ul>
+        <ul class="nav">
+          <li class="nav-item">
+            <form method="POST" action="{{route('logout')}}">
+              @csrf
+              <button type="submit" class="nav-link">
+                <i class="mdi mdi-camera-timer menu-icon"></i> 
+                <span class="menu-title">{{__('Keluar')}}</span>
+              </button>
+            </form>
+          </li>
+        </ul>
       </nav>
