@@ -47,7 +47,7 @@
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end">
                                             <a class="dropdown-item" href="#">
-                                                {{__('Lihat Detil')}}
+                                                {{__('Lihat Detil ')}}
                                             </a>
                                         </div>
                                     </div>
