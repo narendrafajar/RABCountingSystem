@@ -38,20 +38,19 @@
                             <td class="text-center">{{$no++}}</td>
                             <td class="text-center">{{$value->kode}}</td>
                             <td>{{$value->nama}}</td>
-                            <td>{{$value->alamat}}</td>
+                            <td>{{$value->lokasi}}</td>
                             <td class="text-center">
-                                <div class="btn-list flex-nowrap">
-                                    <div class="dropdown">
-                                        <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" /><line x1="13.5" y1="6.5" x2="17.5" y2="10.5" /></svg>
-                                        </button>
-                                        <div class="dropdown-menu dropdown-menu-end">
-                                            <a class="dropdown-item" href="#">
-                                                {{__('Lihat Detil ')}}
-                                            </a>
-                                        </div>
+                              <div class="input-group-prepend">
+                                <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="mdi mdi-pencil"></span></button>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Action</a>
+                                      <a class="dropdown-item" href="#">Another action</a>
+                                      <a class="dropdown-item" href="#">Something else here</a>
+                                      <div role="separator" class="dropdown-divider"></div>
+                                      <a class="dropdown-item" href="#">Separated link</a>
                                     </div>
-                                </div>
+                              </div>
+                            </div>
                             </td>
                         @endforeach
                     @else

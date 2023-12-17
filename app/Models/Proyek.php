@@ -13,6 +13,8 @@ class Proyek extends Model
     protected $fillable = [
         'kode',
         'nama',
+        'jenis_proyek',
+        'jenis_rab',
         'pemasok_id',
         'tanggal_mulai',
         'lokasi',

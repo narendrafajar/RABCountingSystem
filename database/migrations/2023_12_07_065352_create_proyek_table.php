@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('kode')->unique();
             $table->string('nama');
             $table->foreignId('pemasok_id')->constrained('pemasok');
+            $table->enum('jenis_proyek',['0','1'])->default('0');
+            $table->enum('jenis_rab',['0','1'])->default('0');
             $table->dateTime('tanggal_mulai');
             $table->text('lokasi');
             $table->string('tahun_anggaran');
