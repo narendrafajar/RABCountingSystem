@@ -22,7 +22,7 @@
                 </div>
                 <div id="table-{{ $data['tables'][0] }}">
                     <div class="table-responsive pt-3" id="{{ $data['tables'][0] }}">
-                        <table class="table table-bordered" id="{{ $data['tables'][0] }}">
+                        <table class="table" id="{{ $data['tables'][0] }}">
                             <thead>
                                 <tr>
                                     <th class="text-center">{{__('#')}}</th>

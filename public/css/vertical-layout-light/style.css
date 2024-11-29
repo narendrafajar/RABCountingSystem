@@ -8975,7 +8975,7 @@ th {
 }
 
 label {
-  display: inline-block;
+  display: block;
 }
 
 button {

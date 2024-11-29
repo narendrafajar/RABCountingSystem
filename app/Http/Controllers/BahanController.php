@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bahan;
+use DB;
 use Illuminate\Http\Request;
 
 class BahanController extends Controller
@@ -10,9 +11,21 @@ class BahanController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    protected $tables = array('bahan');
+    protected Bahan $bahan;
+    public function __construct(
+        Bahan $bahan,
+    )
     {
-        //
+        $this->perPage = 15;
+        $this->bahan = $bahan;
+    }
+    public function index(Request $request)
+    {
+        $data['tables'] = $this->tables;
+        $data['main'] = $this->bahan->paginate($this->perPage);
+
+        return view('setting.bahan',['data'=>$data]);
     }
 
     /**
@@ -61,5 +74,23 @@ class BahanController extends Controller
     public function destroy(Bahan $bahan)
     {
         //
+    }
+
+    public function loadTable(Request $request)
+    {
+        $data['tables'] = $this->tables;
+        $keyword = isset($request->keyword) ? $request->keyword : '';
+        $perPage = isset($request->perPage) ? $request->perPage : $this->perPage;
+        $page = isset($request->page) ? $request->page : 1;
+        $tableFilter = isset($request->tableFilter) ? $request->tableFilter : '';
+
+        $data['main'] = $this->bahan
+        ->where(function($query)use($keyword){
+            $query->where('kode', 'like', '%' . $keyword . '%')
+            ->orWhere('nama', 'like', '%' . $keyword . '%');
+        })
+        ->paginate($this->perPage);
+
+        return view('setting.table-bahan', ['data' => $data])->render();
     }
 }

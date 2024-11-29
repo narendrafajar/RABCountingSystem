@@ -51,6 +51,8 @@ class ProyekController extends Controller
                 'kode'          => $kodeProyek,
                 'nama'          => $request->nmproject,
                 'pemasok_id'    => $request->nmpemberi,
+                'jenis_proyek'    => $request->jenis_proyek,
+                'jenis_rab'    => $request->jenis_rab,
                 'tanggal_mulai' => $request->tgl,
                 'lokasi'        => $request->alamat,
                 'tahun_anggaran'=> $request->tahun

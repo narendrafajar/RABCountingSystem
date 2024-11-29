@@ -54,13 +54,15 @@
         </div>
         <script src="{{asset('vendors/js/vendor.bundle.base.js')}}"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="{{asset('vendors/bootstrap-datepicker/bootstrap-datepicker.min.js')}}"></script>
         <!-- endinject -->
         <!-- Plugin js for this page -->
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <!-- End plugin js for this page -->
         <!-- inject:js -->
+        <script src="{{asset('js/off-canvas.js')}}"></script>
         <script src="{{asset('js/hoverable-collapse.js')}}"></script>
-
+        {{-- <script src="{{asset('js/template.js')}}"></script> --}}
         <!-- endinject -->
         <!-- Custom js for this page-->
         <script src="{{asset('js/dashboard.js')}}"></script>

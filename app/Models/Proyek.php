@@ -20,4 +20,9 @@ class Proyek extends Model
         'lokasi',
         'tahun_anggaran'
     ];
+
+    public function pemasok()
+    {
+        return $this->belongsTo(Pemasok::class, 'pemasok_id');
+    }
 }

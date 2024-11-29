@@ -84,7 +84,13 @@ class HargaSatuanAlatController extends Controller
         $page = isset($request->page) ? $request->page : 1;
         $tableFilter = isset($request->tableFilter) ? $request->tableFilter : '';
 
-        $data['main'] = $this->hsa->paginate($this->perPage);
+        $data['main'] = $this->hsa
+        ->where(function($query)use($keyword){
+            $query->where('kode', 'like', '%' . $keyword . '%')
+            ->orWhere('nama', 'like', '%' . $keyword . '%')
+            ->orWhere('satuan', 'like', '%' . $keyword . '%');
+        })
+        ->paginate($this->perPage);
 
         return view('setting.table-harga-satuan-alat', ['data' => $data])->render();
     }

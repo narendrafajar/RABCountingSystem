@@ -13,12 +13,12 @@ class BahanImport implements ToModel
     */
     public function model(array $row)
     {
-        return new Bahan([
-            'jenis_id' => (int)$row['jenis_id'], // Sesuaikan dengan indeks kolom nama di file Excel
-            'kode' => $row['kode'], // Sesuaikan dengan indeks kolom satuan di file Excel
-            'nama' => $row['nama'], // Sesuaikan dengan indeks kolom satuan di file Excel
-            'harga' => $row['harga'], // Sesuaikan dengan indeks kolom satuan di file Excel
-            // Tambahkan kolom sesuai dengan struktur tabel Anda
-        ]);
+        // return new Bahan([
+        //     'jenis_id' => (int)$row['jenis_id'], // Sesuaikan dengan indeks kolom nama di file Excel
+        //     'kode' => $row['kode'], // Sesuaikan dengan indeks kolom satuan di file Excel
+        //     'nama' => $row['nama'], // Sesuaikan dengan indeks kolom satuan di file Excel
+        //     'harga' => $row['harga'], // Sesuaikan dengan indeks kolom satuan di file Excel
+        //     // Tambahkan kolom sesuai dengan struktur tabel Anda
+        // ]);
     }
 }

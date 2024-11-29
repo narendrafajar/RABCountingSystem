@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('bahan', function (Blueprint $table) {
             $table->id();
             $table->foreignId('jenis_id')->constrained('jenis_bahan');
-            $table->string('kode')->unique();
-            $table->string('nama');
-            $table->decimal('harga',19,2)->default(0);
+            $table->string('kode')->nullable()->unique();
+            $table->string('nama')->nullable();
+            $table->decimal('harga',19,2)->nullable()->default(0);
             $table->timestamps();
         });
     }

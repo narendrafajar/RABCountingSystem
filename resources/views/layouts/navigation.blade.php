@@ -50,10 +50,11 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="{{route('proyek_index')}}">{{__('Bahan')}}</a></li>
-                <li class="nav-item"> <a class="nav-link" href="{{route('proyek_index')}}">{{__('Jenis Bahan')}}</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('analisa_pekerjaan_index')}}">{{__('Analisa Pekerjaan')}}</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('bahan_index')}}">{{__('Bahan')}}</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('jenis_bahan_index')}}">{{__('Jenis Bahan')}}</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{route('hsa_index')}}">{{__('Harga Satuan Alat')}}</a></li>
-                <li class="nav-item"> <a class="nav-link" href="{{route('proyek_index')}}">{{__('Harga Satuan Pekerja')}}</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('hsp_index')}}">{{__('Harga Satuan Pekerja')}}</a></li>
               </ul>
             </div>
           </li>

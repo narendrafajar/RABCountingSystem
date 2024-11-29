@@ -104,3 +104,7 @@ function messageAlert(message, isError = false) {
         $("#message-alert .alert").fadeOut("slow");
     }, 3000);
 }
+
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+});

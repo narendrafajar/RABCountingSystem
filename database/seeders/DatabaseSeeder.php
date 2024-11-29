@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
         $this->call(BahanSeeder::class);
         $this->call(HargaSatuanAlatSeeder::class);
         $this->call(HargaSatuanPekerjaSeeder::class);
+        $this->call(AnalisaHargaSatuanSeeder::class);
+        // $this->call(DetilAnalisaSeeder::class);
         \App\Models\Pemasok::factory(50)->create();
     }
 }
